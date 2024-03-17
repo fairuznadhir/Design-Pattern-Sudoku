@@ -7,14 +7,12 @@
 class GameManager {
 private:
     Board board;
-    std::vector<Player> players;
-    int currentPlayerIndex;
+    Player player;
 
 public:
-    GameManager(int boardSize);
+    GameManager(int boardSize, const std::string& playerName);
     void startGame();
-    bool checkWin();
-    void getPlayerInput(Player& player);
+    void getPlayerInput();
 };
 
 #endif
